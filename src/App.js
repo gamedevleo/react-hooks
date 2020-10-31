@@ -1,10 +1,14 @@
-
 import './App.css';
-import ClassCounter from './components/ClassCounter';
-import HookCounter from './components/HookCounter';
-import HookCounterTwo from './components/HookCounterTwo';
-import HookCounterThree from './components/HookCounterThree';
-import HookCounterFour from './components/HookCounterFour';
+import {ClassCounter,
+  HookCounter,
+  HookCounterTwo,
+  HookCounterThree,
+  HookCounterFour} from './useState';
+import {EffectHookCounterOne,
+  EffectHookCounterTwo,
+  MouseContainer,
+  IntervalHookCounter,
+  DataFetching} from './useEffect';
 
 function App() {
   return (
@@ -14,6 +18,11 @@ function App() {
       <HookCounterTwo />
       <HookCounterThree />
       <HookCounterFour />
+      <EffectHookCounterOne />
+      <EffectHookCounterTwo />
+      <MouseContainer />
+      <IntervalHookCounter />
+      <DataFetching />
     </div>
   );
 }

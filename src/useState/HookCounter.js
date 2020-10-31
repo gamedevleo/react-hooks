@@ -10,4 +10,4 @@ const HookCounter = () =>{
   )
 }
 
-export default HookCounter;
+export {HookCounter};

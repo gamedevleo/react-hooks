@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 
-//usestate with array      
+//usestate with array
 const HookCounterFour = () =>{
   const [items,setItems] = useState([]);
 
@@ -25,4 +25,4 @@ const HookCounterFour = () =>{
   )
 }
 
-export default HookCounterFour;
+export {HookCounterFour};

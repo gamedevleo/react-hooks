@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 
 
-//useState with previous state   the parameter should be a function 
+//useState with previous state   the parameter should be a function
 const HookCounterTwo = ()=>{
   const initialState = 10;
   const [count,setCount] = useState(initialState);
@@ -24,4 +24,4 @@ const HookCounterTwo = ()=>{
   )
 }
 
-export default HookCounterTwo;
+export {HookCounterTwo};
