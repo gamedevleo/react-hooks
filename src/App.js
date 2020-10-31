@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import {ClassCounter,
   HookCounter,
@@ -9,6 +10,10 @@ import {EffectHookCounterOne,
   MouseContainer,
   IntervalHookCounter,
   DataFetching} from './useEffect';
+import {ContainerA} from './useContext/index';
+
+
+export const MyContext = React.createContext('');
 
 function App() {
   return (
@@ -23,6 +28,9 @@ function App() {
       <MouseContainer />
       <IntervalHookCounter />
       <DataFetching />
+      <MyContext.Provider value={'SDASDS'}>
+        <ContainerA />
+      </MyContext.Provider>
     </div>
   );
 }
