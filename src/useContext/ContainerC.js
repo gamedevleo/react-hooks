@@ -5,7 +5,7 @@ export const ContainerC = () => {
   const name = useContext(MyContext);
   return (
     <div>
-      Container C: {name}
+      Your name: {name}
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useReducer} from 'react';
 import './App.css';
 import {ClassCounter,
   HookCounter,
@@ -11,11 +11,45 @@ import {EffectHookCounterOne,
   IntervalHookCounter,
   DataFetching} from './useEffect';
 import {ContainerA} from './useContext/index';
-
+import {CounterOne,
+  CounterTwo,
+  CounterThree,
+  DataFetchingOne,
+  DataFetchingTwo} from './useReducer/index';
+import {ComponentA,
+  ComponentB,
+  ComponentC} from './useReducer&useContext/index'
 
 export const MyContext = React.createContext('');
 
+export const CounterContext = React.createContext();
+
+const initialState = {
+  firstCounter:0
+}
+
+const reducer = (state,action)=>{
+  switch(action.type){
+    case 'increasement':
+      return {
+        firstCounter:state.firstCounter+1
+      }
+    case 'decreasement':
+      return{
+        firstCounter:state.firstCounter-1
+      }
+    case 'reset':
+      return{
+        firstCounter:initialState.firstCounter
+      }
+    default:
+      return state;
+  }
+
+}
+
 function App() {
+  const [count,dispatch] = useReducer(reducer,initialState);
   return (
     <div className="App">
       <ClassCounter />
@@ -28,9 +62,20 @@ function App() {
       <MouseContainer />
       <IntervalHookCounter />
       <DataFetching />
-      <MyContext.Provider value={'SDASDS'}>
+      <MyContext.Provider value={'Kaiyang'}>
         <ContainerA />
       </MyContext.Provider>
+      <CounterOne />
+      <CounterTwo />
+      <CounterThree />
+      <CounterContext.Provider value ={{CountState:count,CountDispatch:dispatch}}>
+          <h2>count:{count.firstCounter}</h2>
+          <ComponentA />
+          <ComponentB />
+          <ComponentC />
+      </CounterContext.Provider>
+      <DataFetchingOne />
+      <DataFetchingTwo />
     </div>
   );
 }

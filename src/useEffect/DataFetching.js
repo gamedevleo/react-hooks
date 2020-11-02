@@ -22,8 +22,8 @@ export const DataFetching = (props) => {
   },[fetchFormId]);
   return (
     <div>
-      <input value = {id} onChange ={(e)=>setId(e.target.value)} />
-      <button onClick = {handleFetchID} >FetchPost</button>
+      <input value = {id} onChange ={e=>setId(e.target.value)} />
+      <button onClick={()=>handleFetchID()}>FetchPost</button>
       <p>{post.title}</p>
     </div>
   )

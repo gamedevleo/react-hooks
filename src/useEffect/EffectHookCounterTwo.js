@@ -13,7 +13,7 @@ export const EffectHookCounterTwo =() =>{
   return(
     <div>
       <input type='text' value={name} onChange={(e)=>setName(e.target.value)}/>
-      <button onClick={()=>setCount(count+1)}>Click {count} times</button>
+      <button onClick={()=>setCount(count+1)}>{name} Click {count} times</button>
     </div>
   )
 
