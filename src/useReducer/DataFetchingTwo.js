@@ -32,7 +32,7 @@ export const DataFetchingTwo = () => {
   const [state,dispatch]=useReducer(reducer,initialState);
 
   useEffect(()=>{
-    axios.get('https://jsonplaeholder.typicode.com/posts/1')
+    axios.get('https://jsonplaceholder.typicode.com/posts/1')
       .then(res=>{
         dispatch({type:'FETCH_SUCCESS',payload:res.data})
       })

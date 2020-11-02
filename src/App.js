@@ -18,7 +18,12 @@ import {CounterOne,
   DataFetchingTwo} from './useReducer/index';
 import {ComponentA,
   ComponentB,
-  ComponentC} from './useReducer&useContext/index'
+  ComponentC} from './useReducer&useContext/index';
+import {ParentComponent} from './useCallback/index';
+import {Counter} from './useMemo/index';
+import {FocusInput,HookTimer} from './useRef/index';
+
+
 
 export const MyContext = React.createContext('');
 
@@ -76,6 +81,10 @@ function App() {
       </CounterContext.Provider>
       <DataFetchingOne />
       <DataFetchingTwo />
+      <ParentComponent />
+      <Counter />
+      <FocusInput />
+      <HookTimer/>
     </div>
   );
 }
