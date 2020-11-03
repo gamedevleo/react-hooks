@@ -22,6 +22,8 @@ import {ComponentA,
 import {ParentComponent} from './useCallback/index';
 import {Counter} from './useMemo/index';
 import {FocusInput,HookTimer} from './useRef/index';
+import {CustomCounterOne,CustomCounterTwo} from './useCustomHook';
+import {UserForm} from './useInputCustomHook';
 
 
 
@@ -85,6 +87,9 @@ function App() {
       <Counter />
       <FocusInput />
       <HookTimer/>
+      <CustomCounterOne />
+      <CustomCounterTwo />
+      <UserForm />
     </div>
   );
 }
